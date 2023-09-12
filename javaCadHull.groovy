@@ -2,7 +2,7 @@ import  eu.mihosoft.vrl.v3d.ext.quickhull3d.*
 import eu.mihosoft.vrl.v3d.Vector3d
 
 //Move and rotate opperations
-double size =40;
+double size =70;
 CSG cube = new Cube(	size,// X dimention
 			size,// Y dimention
 			size//  Z dimention
@@ -18,10 +18,10 @@ CSG hulledCubes = cube.union(movedCube).hull();
 hulledCubes = CSG.hullAll([cube,movedCube])
 
 //A Now make a triangle
-def points = [	new Vector3d(10, 50, 10),
+def points = [	new Vector3d(100, 50, 10),
 			new Vector3d(10, 40, 10),
 			new Vector3d(-10, 50, 10),
-			new Vector3d(-10, 40, 10),
+			new Vector3d(-10, 90, 10),
 			new Vector3d(0, 50, 60)
 ]
 CSG hullSection = HullUtil.hull(points)
